@@ -1,13 +1,18 @@
+import Image from 'next/image';
+import breadImage from './assets/bread.jpg';
+import ThemeToggle from './components/ThemeToggle';
+
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-amber-50 via-white to-amber-50">
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+      <ThemeToggle />
       {/* Hero Section */}
-      <header className="bg-gradient-to-r from-amber-600 to-amber-800 text-white py-20 px-4">
+      <header className="bg-gradient-to-r from-blue-600 to-blue-800 dark:from-blue-900 dark:to-blue-950 text-white py-20 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold mb-4 tracking-tight">
             MNA Heavenly Bakery
           </h1>
-          <p className="text-xl md:text-2xl text-amber-100 font-light">
+          <p className="text-xl md:text-2xl text-blue-100 font-light">
             Fresh baked goods made with love
           </p>
         </div>
@@ -15,9 +20,9 @@ export default function Home() {
 
       {/* Important Notices */}
       <section className="max-w-6xl mx-auto px-4 py-8">
-        <div className="bg-amber-100 border-l-4 border-amber-600 p-6 rounded-lg mb-8">
-          <h2 className="text-lg font-bold text-amber-900 mb-3">Important Information</h2>
-          <ul className="space-y-2 text-amber-800">
+        <div className="bg-blue-100 dark:bg-blue-900 border-l-4 border-blue-600 dark:border-blue-400 p-6 rounded-lg mb-8">
+          <h2 className="text-lg font-bold text-blue-900 dark:text-blue-100 mb-3">Important Information</h2>
+          <ul className="space-y-2 text-blue-800 dark:text-blue-200">
             <li className="flex items-start">
               <span className="font-semibold mr-2">•</span>
               <span>$25 fee for changes to Delivery/Pickup date</span>
@@ -34,12 +39,12 @@ export default function Home() {
         </div>
 
         {/* Menu Section */}
-        <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 mb-12">
-          <h2 className="text-4xl font-bold text-amber-900 mb-8 text-center">Our Menu</h2>
+        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 md:p-12 mb-12">
+          <h2 className="text-4xl font-bold text-blue-900 dark:text-blue-100 mb-8 text-center">Our Menu</h2>
 
           {/* Cookies Section */}
           <section className="mb-12">
-            <h3 className="text-3xl font-semibold text-amber-800 mb-6 pb-2 border-b-2 border-amber-200">
+            <h3 className="text-3xl font-semibold text-blue-800 dark:text-blue-200 mb-6 pb-2 border-b-2 border-blue-200 dark:border-blue-700">
               Cookies
             </h3>
             <div className="grid md:grid-cols-2 gap-4">
@@ -56,7 +61,7 @@ export default function Home() {
 
           {/* Cakes Section */}
           <section className="mb-12">
-            <h3 className="text-3xl font-semibold text-amber-800 mb-6 pb-2 border-b-2 border-amber-200">
+            <h3 className="text-3xl font-semibold text-blue-800 dark:text-blue-200 mb-6 pb-2 border-b-2 border-blue-200 dark:border-blue-700">
               Cakes
             </h3>
             <div className="grid md:grid-cols-2 gap-4">
@@ -69,7 +74,7 @@ export default function Home() {
 
           {/* Other Desserts Section */}
           <section className="mb-12">
-            <h3 className="text-3xl font-semibold text-amber-800 mb-6 pb-2 border-b-2 border-amber-200">
+            <h3 className="text-3xl font-semibold text-blue-800 dark:text-blue-200 mb-6 pb-2 border-b-2 border-blue-200 dark:border-blue-700">
               Other Desserts
             </h3>
             <div className="grid md:grid-cols-2 gap-4">
@@ -82,9 +87,19 @@ export default function Home() {
 
           {/* Banana Bread Section */}
           <section>
-            <h3 className="text-3xl font-semibold text-amber-800 mb-6 pb-2 border-b-2 border-amber-200">
+            <h3 className="text-3xl font-semibold text-blue-800 dark:text-blue-200 mb-6 pb-2 border-b-2 border-blue-200 dark:border-blue-700">
               Banana Bread
             </h3>
+            <div className="flex justify-center mb-6">
+              <Image
+                src={breadImage}
+                alt="Fresh baked bread"
+                width={300}
+                height={200}
+                className="rounded-lg shadow-2xl max-w-full h-auto"
+                priority
+              />
+            </div>
             <div className="grid md:grid-cols-2 gap-4">
               <MenuItem name="Banana Bread" price="$25" />
               <MenuItem name="Chocolate Chip Banana Bread" price="$35" />
@@ -96,14 +111,14 @@ export default function Home() {
         </div>
 
         {/* Contact/Order Section */}
-        <footer className="bg-gradient-to-r from-amber-600 to-amber-800 text-white rounded-2xl shadow-xl p-8 md:p-12 text-center">
+        <footer className="bg-gradient-to-r from-blue-600 to-blue-800 dark:from-blue-900 dark:to-blue-950 text-white rounded-2xl shadow-xl p-8 md:p-12 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Order?</h2>
-          <p className="text-xl text-amber-100 mb-8">
+          <p className="text-xl text-blue-100 mb-8">
             Contact us to place your custom order today!
           </p>
           
           {/* Contact Details */}
-          <div className="mb-8 space-y-3 text-amber-100">
+          <div className="mb-8 space-y-3 text-blue-100">
             <p className="text-lg">
               8535 Greenbrier, San Antonio, TX, United States, Texas
             </p>
@@ -127,13 +142,13 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+12103468303"
-              className="bg-white text-amber-800 px-8 py-4 rounded-full font-semibold hover:bg-amber-50 transition-colors shadow-lg"
+              className="bg-white text-blue-800 px-8 py-4 rounded-full font-semibold hover:bg-blue-50 transition-colors shadow-lg"
             >
               Call Us
             </a>
             <a
               href="mailto:btippen98@gmail.com"
-              className="bg-amber-700 text-white px-8 py-4 rounded-full font-semibold hover:bg-amber-600 transition-colors shadow-lg"
+              className="bg-blue-700 text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-600 transition-colors shadow-lg"
             >
               Email Us
             </a>
@@ -146,15 +161,15 @@ export default function Home() {
 
 function MenuItem({ name, price, price2, note }) {
   return (
-    <div className="bg-gradient-to-br from-amber-50 to-white p-6 rounded-lg border border-amber-200 hover:shadow-lg transition-shadow">
-      <h4 className="text-xl font-semibold text-amber-900 mb-2">{name}</h4>
+    <div className="bg-gradient-to-br from-blue-50 to-white dark:from-gray-700 dark:to-gray-800 p-6 rounded-lg border border-blue-200 dark:border-gray-600 hover:shadow-lg transition-shadow">
+      <h4 className="text-xl font-semibold text-blue-900 dark:text-blue-100 mb-2">{name}</h4>
       <div className="space-y-1">
-        <p className="text-lg font-medium text-amber-800">{price}</p>
+        <p className="text-lg font-medium text-blue-800 dark:text-blue-200">{price}</p>
         {price2 && (
-          <p className="text-lg font-medium text-amber-800">{price2}</p>
+          <p className="text-lg font-medium text-blue-800 dark:text-blue-200">{price2}</p>
         )}
         {note && (
-          <p className="text-sm text-amber-600 italic">{note}</p>
+          <p className="text-sm text-blue-600 dark:text-blue-300 italic">{note}</p>
         )}
       </div>
     </div>
