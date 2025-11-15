@@ -1,6 +1,9 @@
 import Image from 'next/image';
 import breadImage from './assets/bread.jpg';
 import ThemeToggle from './components/ThemeToggle';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 export default function Home() {
   return (
@@ -123,18 +126,27 @@ export default function Home() {
               8535 Greenbrier, San Antonio, TX, United States, Texas
             </p>
             <p className="text-lg">
-              <a href="tel:+12103468303" className="hover:text-white transition-colors underline">
+              <a href="tel:+12103468303" className="hover:text-white transition-colors underline flex items-center justify-center gap-2">
+                <FontAwesomeIcon icon={faPhone} className="w-5 h-5" />
                 (210) 346-8303
               </a>
             </p>
             <p className="text-lg">
-              <a href="mailto:btippen98@gmail.com" className="hover:text-white transition-colors underline">
+              <a href="mailto:btippen98@gmail.com" className="hover:text-white transition-colors underline flex items-center justify-center gap-2">
+                <FontAwesomeIcon icon={faEnvelope} className="w-5 h-5" />
                 btippen98@gmail.com
               </a>
             </p>
             <p className="text-lg">
-              <a href="https://instagram.com/Drkness89" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline">
-                instagram.com/Drkness89
+              <a href="https://instagram.com/Drkness89" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline flex items-center justify-center gap-2">
+                <FontAwesomeIcon icon={faInstagram} className="w-5 h-5" />
+                Instagram
+              </a>
+            </p>
+            <p className="text-lg">
+              <a href="https://www.facebook.com/profile.php?id=61577015690219" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline flex items-center justify-center gap-2">
+                <FontAwesomeIcon icon={faFacebook} className="w-5 h-5" />
+                Facebook
               </a>
             </p>
           </div>
@@ -142,14 +154,16 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+12103468303"
-              className="bg-white text-blue-800 px-8 py-4 rounded-full font-semibold hover:bg-blue-50 transition-colors shadow-lg"
+              className="bg-white text-blue-800 px-8 py-4 rounded-full font-semibold hover:bg-blue-50 transition-colors shadow-lg flex items-center justify-center gap-2"
             >
+              <FontAwesomeIcon icon={faPhone} className="w-5 h-5" />
               Call Us
             </a>
             <a
               href="mailto:btippen98@gmail.com"
-              className="bg-blue-700 text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-600 transition-colors shadow-lg"
+              className="bg-blue-700 text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-600 transition-colors shadow-lg flex items-center justify-center gap-2"
             >
+              <FontAwesomeIcon icon={faEnvelope} className="w-5 h-5" />
               Email Us
             </a>
           </div>
