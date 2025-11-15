@@ -1,0 +1,1 @@
+This is a Next.js application for the MNA Heavenly Bakery. It is a lnading page with menu and contact information.

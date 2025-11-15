@@ -1,65 +1,162 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
+    <div className="min-h-screen bg-gradient-to-b from-amber-50 via-white to-amber-50">
+      {/* Hero Section */}
+      <header className="bg-gradient-to-r from-amber-600 to-amber-800 text-white py-20 px-4">
+        <div className="max-w-6xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold mb-4 tracking-tight">
+            MNA Heavenly Bakery
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="text-xl md:text-2xl text-amber-100 font-light">
+            Fresh baked goods made with love
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </header>
+
+      {/* Important Notices */}
+      <section className="max-w-6xl mx-auto px-4 py-8">
+        <div className="bg-amber-100 border-l-4 border-amber-600 p-6 rounded-lg mb-8">
+          <h2 className="text-lg font-bold text-amber-900 mb-3">Important Information</h2>
+          <ul className="space-y-2 text-amber-800">
+            <li className="flex items-start">
+              <span className="font-semibold mr-2">•</span>
+              <span>$25 fee for changes to Delivery/Pickup date</span>
+            </li>
+            <li className="flex items-start">
+              <span className="font-semibold mr-2">•</span>
+              <span>Delivery cost is based on distance</span>
+            </li>
+            <li className="flex items-start">
+              <span className="font-semibold mr-2">•</span>
+              <span>Each order can be customized</span>
+            </li>
+          </ul>
         </div>
-      </main>
+
+        {/* Menu Section */}
+        <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 mb-12">
+          <h2 className="text-4xl font-bold text-amber-900 mb-8 text-center">Our Menu</h2>
+
+          {/* Cookies Section */}
+          <section className="mb-12">
+            <h3 className="text-3xl font-semibold text-amber-800 mb-6 pb-2 border-b-2 border-amber-200">
+              Cookies
+            </h3>
+            <div className="grid md:grid-cols-2 gap-4">
+              <MenuItem name="Chocolate Chip Cookies" price="$15 for 6" price2="$25 for 12" />
+              <MenuItem name="Brownie Cookies" price="$12 for 6" price2="$20 for 12" />
+              <MenuItem name="Chocolate Chip Oatmeal Cookies" price="$15 for 6" price2="$25 for 12" />
+              <MenuItem name="Oatmeal Cookies" price="$10 for 6" price2="$15 for 12" />
+              <MenuItem name="Peanut Butter Cookies" price="$10 for 6" price2="$15 for 12" />
+              <MenuItem name="M&M Cookies" price="$15 for 6" price2="$25 for 12" />
+              <MenuItem name="Peanut Butter Oatmeal Cookies" price="$15 for 6" price2="$25 for 12" />
+              <MenuItem name="Chocolate Cookies" price="$12 for 6" price2="$20 for 12" />
+            </div>
+          </section>
+
+          {/* Cakes Section */}
+          <section className="mb-12">
+            <h3 className="text-3xl font-semibold text-amber-800 mb-6 pb-2 border-b-2 border-amber-200">
+              Cakes
+            </h3>
+            <div className="grid md:grid-cols-2 gap-4">
+              <MenuItem name="Small Cake" price="$40 per layer" note="Special Filling + $5 - $15" />
+              <MenuItem name="Medium Cake" price="$55 per layer" note="Special Filling + $5 - $15" />
+              <MenuItem name="Large Cake" price="$70 per layer" note="Special Filling + $5 - $15" />
+              <MenuItem name="Brownie Cake" price="$30 for small" note="+ $15 per size" />
+            </div>
+          </section>
+
+          {/* Other Desserts Section */}
+          <section className="mb-12">
+            <h3 className="text-3xl font-semibold text-amber-800 mb-6 pb-2 border-b-2 border-amber-200">
+              Other Desserts
+            </h3>
+            <div className="grid md:grid-cols-2 gap-4">
+              <MenuItem name="Brownies" price="$20 per tray" />
+              <MenuItem name="Coffee Cake" price="$30" />
+              <MenuItem name="Banana Pudding" price="$35" />
+              <MenuItem name="Creme Brulé" price="$5 each" />
+            </div>
+          </section>
+
+          {/* Banana Bread Section */}
+          <section>
+            <h3 className="text-3xl font-semibold text-amber-800 mb-6 pb-2 border-b-2 border-amber-200">
+              Banana Bread
+            </h3>
+            <div className="grid md:grid-cols-2 gap-4">
+              <MenuItem name="Banana Bread" price="$25" />
+              <MenuItem name="Chocolate Chip Banana Bread" price="$35" />
+              <MenuItem name="Walnut Banana Bread" price="$35" />
+              <MenuItem name="Cinnamon Banana Bread" price="$25" />
+              <MenuItem name="Chocolate Banana Bread" price="$30" />
+            </div>
+          </section>
+        </div>
+
+        {/* Contact/Order Section */}
+        <footer className="bg-gradient-to-r from-amber-600 to-amber-800 text-white rounded-2xl shadow-xl p-8 md:p-12 text-center">
+          <h2 className="text-3xl font-bold mb-4">Ready to Order?</h2>
+          <p className="text-xl text-amber-100 mb-8">
+            Contact us to place your custom order today!
+          </p>
+          
+          {/* Contact Details */}
+          <div className="mb-8 space-y-3 text-amber-100">
+            <p className="text-lg">
+              8535 Greenbrier, San Antonio, TX, United States, Texas
+            </p>
+            <p className="text-lg">
+              <a href="tel:+12103468303" className="hover:text-white transition-colors underline">
+                (210) 346-8303
+              </a>
+            </p>
+            <p className="text-lg">
+              <a href="mailto:btippen98@gmail.com" className="hover:text-white transition-colors underline">
+                btippen98@gmail.com
+              </a>
+            </p>
+            <p className="text-lg">
+              <a href="https://instagram.com/Drkness89" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline">
+                instagram.com/Drkness89
+              </a>
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+12103468303"
+              className="bg-white text-amber-800 px-8 py-4 rounded-full font-semibold hover:bg-amber-50 transition-colors shadow-lg"
+            >
+              Call Us
+            </a>
+            <a
+              href="mailto:btippen98@gmail.com"
+              className="bg-amber-700 text-white px-8 py-4 rounded-full font-semibold hover:bg-amber-600 transition-colors shadow-lg"
+            >
+              Email Us
+            </a>
+          </div>
+        </footer>
+      </section>
+    </div>
+  );
+}
+
+function MenuItem({ name, price, price2, note }) {
+  return (
+    <div className="bg-gradient-to-br from-amber-50 to-white p-6 rounded-lg border border-amber-200 hover:shadow-lg transition-shadow">
+      <h4 className="text-xl font-semibold text-amber-900 mb-2">{name}</h4>
+      <div className="space-y-1">
+        <p className="text-lg font-medium text-amber-800">{price}</p>
+        {price2 && (
+          <p className="text-lg font-medium text-amber-800">{price2}</p>
+        )}
+        {note && (
+          <p className="text-sm text-amber-600 italic">{note}</p>
+        )}
+      </div>
     </div>
   );
 }
