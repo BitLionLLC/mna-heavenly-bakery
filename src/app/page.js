@@ -132,9 +132,9 @@ export default function Home() {
               </a>
             </p>
             <p className="text-lg">
-              <a href="mailto:btippen98@gmail.com" className="hover:text-white transition-colors underline flex items-center justify-center gap-2">
+              <a href="mailto:benjamin@mnaheavenlybakery.com" className="hover:text-white transition-colors underline flex items-center justify-center gap-2">
                 <FontAwesomeIcon icon={faEnvelope} className="w-5 h-5" />
-                btippen98@gmail.com
+                benjamin@mnaheavenlybakery.com
               </a>
             </p>
             <p className="text-lg">
@@ -160,7 +160,7 @@ export default function Home() {
               Call Us
             </a>
             <a
-              href="mailto:btippen98@gmail.com"
+              href="mailto:benjamin@mnaheavenlybakery.com"
               className="bg-blue-700 text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-600 transition-colors shadow-lg flex items-center justify-center gap-2"
             >
               <FontAwesomeIcon icon={faEnvelope} className="w-5 h-5" />
